@@ -29,6 +29,7 @@ In order traversal: 1,2,3,5,6,7,8
 #         self.val = val
 #         self.left = left
 #         self.right = right
+#Inorder Traversal
 class Solution:
     def inorderTraversal(self, root: TreeNode) -> List[int]:
         result = []
@@ -40,6 +41,28 @@ class Solution:
             traversal(root.right)#right
         traversal(root)
         return result
+#Preorder Traversal
+Class Solution:
+	def preorderTraversal(self, root: TreeNote) -> List[int]:
+		result = []
+		if root == None:
+			return
+		result.append(root.val)#root
+		traversal(root.left)#left
+		traversal(root.right)#right
+	traversal(root)
+	return result
+#postorder Traversal
+Class Solution:
+	def preorderTraversal(self, root: TreeNote) -> List[int]:
+		result = []
+		if root == None:
+			return
+		traversal(root.left)#left
+		traversal(root.right)#right
+		result.append(root.val)#root
+	traversal(root)
+	return result
 ```
 
 > Time: O(n) for walk
